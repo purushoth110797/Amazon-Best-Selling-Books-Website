@@ -1,5 +1,6 @@
 ### Amazon Best Selling Books Website
-## Website Preview
+
+![Sample image of the website](./image.png)
 
 ## Overview
 Welcome to the Amazon Best Selling Books website built with React! This web page displays a curated list of Amazon's best-selling books, allowing users to explore popular titles conveniently. The project is designed to provide a seamless and engaging experience for book enthusiasts.
