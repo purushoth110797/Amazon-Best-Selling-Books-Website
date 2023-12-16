@@ -1,17 +1,35 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+// importing external packages
+import React from 'react'
+import ReactDOM from 'react-dom'
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+// importing the css
+import './index.css'
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+// Importing the external books list
+import { books } from './books'
+
+// Import book components from external JS file
+import BookContainer from './book'
+
+// Importing heading component from external JS file
+import { PageHeading } from './heading'
+
+// Main components
+function Booklist() {
+  return (
+    <section className='booklist-container'>
+      {books.map((book) => {
+        return <BookContainer key={book.id} {...book}></BookContainer>
+      })}
+    </section>
+  )
+}
+
+// Rendering the functions
+ReactDOM.render(
+  <React.Fragment>
+    <PageHeading />
+    <Booklist />
+  </React.Fragment>,
+  document.getElementById('root')
+)
